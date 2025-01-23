@@ -4,7 +4,7 @@ import pyttsx3
 engine = pyttsx3.init()
 
 # Set properties (optional)
-engine.setProperty('rate', 200)  # Speed of speech (higher is faster)
+engine.setProperty('rate', 150)  # Speed of speech (higher is faster)
 engine.setProperty('volume', 1)  # Volume level (0.0 to 1.0)
 
 # Function to speak the given text

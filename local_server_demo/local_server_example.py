@@ -9,11 +9,13 @@ import sys
 hostName = "localhost"
 serverPort = 8080
 
+# Server creation
 class MyServer(BaseHTTPRequestHandler):
     def do_GET(self):
           self.send_response(200)
           self.send_header("Content-type", "text/html")
           self.end_headers()
+
           self.wfile.write(bytes("<html><head><title>Deep Korat</title></head>", "utf-8"))
           self.wfile.write(bytes("<p>Request: %s</p>" % self.path, "utf-8"))
           self.wfile.write(bytes("<body>", "utf-8"))
@@ -21,6 +23,7 @@ class MyServer(BaseHTTPRequestHandler):
           self.wfile.write(bytes("</body></html>", "utf-8"))
 
          
+# main function          
 if __name__ == "__main__":        
     webServer = HTTPServer((hostName, serverPort), MyServer)
     print("Server started http://%s:%s" % (hostName, serverPort))
