@@ -1,3 +1,6 @@
+# In this code I creat a python custom webserver
+# Reference: https://pythonbasics.org/webserver/
+
 # Python 3 server example
 from http.server import BaseHTTPRequestHandler, HTTPServer
 import time
@@ -15,7 +18,7 @@ class MyServer(BaseHTTPRequestHandler):
           self.wfile.write(bytes("<body>", "utf-8"))
           self.wfile.write(bytes("<p>This is an example web server.</p>", "utf-8"))
           self.wfile.write(bytes("</body></html>", "utf-8"))
-          # self.wfile.write("<h1>Hello deep bhai I am watching from server side</h1>")
+
          
          
          
