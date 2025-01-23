@@ -1,8 +1,6 @@
 # In this code I creat a python custom webserver
 # Reference: https://pythonbasics.org/webserver/
 
-## ISSUE: Server will not closed when we press ctrl+c
-
 # Python 3 server example
 from http.server import BaseHTTPRequestHandler, HTTPServer
 import time
